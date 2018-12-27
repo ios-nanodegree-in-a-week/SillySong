@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Generate Silly Song-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Generate Silly Song" id="BYZ-38-t0r" userLabel="Generate Silly Song" customClass="ViewController" customModule="SillySong" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hg6-ox-SlT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zca-xs-x8Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zu-GQ-4gU">
+                                <rect key="frame" x="105" y="46" width="165" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="dX4-e7-CLb"/>
+                                    <constraint firstAttribute="height" constant="59" id="iJV-Hc-iro"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="59" id="tYd-iK-qTv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="165" id="usq-B5-RGc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" red="0.50767872431506844" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Your Song will show up here.     Enter your name first." textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8av-i9-AKi">
+                                <rect key="frame" x="16" y="255" width="343" height="309"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.70196078429999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="KyJ-sy-UdO"/>
+                                    <constraint firstAttribute="height" constant="309" id="hoT-0D-DNP"/>
+                                </constraints>
+                                <color key="textColor" red="0.50767872430000005" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="INa-oP-DXX">
+                                <rect key="frame" x="16" y="133" width="343" height="33"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="continue" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="t01-GK-DDV"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Db5-Kf-T1b"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0078431372549019607" green="0.70196078431372544" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" staticText="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="INa-oP-DXX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ceq-Ft-cbf"/>
+                            <constraint firstItem="8av-i9-AKi" firstAttribute="top" secondItem="INa-oP-DXX" secondAttribute="bottom" constant="89" id="FoH-R0-bGU"/>
+                            <constraint firstItem="INa-oP-DXX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="GOV-nI-Y3Y"/>
+                            <constraint firstItem="8av-i9-AKi" firstAttribute="centerX" secondItem="INa-oP-DXX" secondAttribute="centerX" id="NZJ-i9-qEt"/>
+                            <constraint firstAttribute="trailing" secondItem="INa-oP-DXX" secondAttribute="trailing" constant="16" id="Ocd-78-fKP"/>
+                            <constraint firstItem="9Zu-GQ-4gU" firstAttribute="top" secondItem="Hg6-ox-SlT" secondAttribute="bottom" constant="26" id="ctm-vj-Hgx"/>
+                            <constraint firstItem="INa-oP-DXX" firstAttribute="top" secondItem="9Zu-GQ-4gU" secondAttribute="bottom" constant="28" id="cyX-Wf-mjA"/>
+                            <constraint firstItem="9Zu-GQ-4gU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qEs-33-zW9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="8av-i9-AKi" id="698-H9-SZk"/>
+                        <outlet property="nameField" destination="INa-oP-DXX" id="rP6-MG-jE4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+</document>
